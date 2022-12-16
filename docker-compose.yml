@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  employeeapi:
+    image: ${DOCKER_REGISTRY-}employeeapi
+    build:
+      context: .
+      dockerfile: EmployeeAPI/Dockerfile
+    ports:
+    - "5000:80"
